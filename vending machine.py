@@ -23,31 +23,31 @@ print('Enter the First word of the product \nC = Coffee \nT = Tea\nS = Soup\nB =
 
 user=input('Enter the Product ')
 
+i=user.lower()
 
+if  i=='c':
 
-if  user=='c':
-
-    print(menu[user])
+    print(menu[i])
 
     coffe=input("Enter the number ")
 
     print('Enjoy your' ,menu['c'][coffe])
 
-elif user =='t':
+elif i =='t':
 
-    print(menu[user])
+    print(menu[i])
     tea = input("Enter the number ")
     print('Enjoy your', menu['t'][tea])
 
-elif user =='s':
+elif i =='s':
 
-    print(menu[user])
+    print(menu[i])
     soups = input("Enter the number ")
     print('Enjoy your',menu['s'][soups])
 
-elif user == 'b':
+elif i == 'b':
 
-    print(menu[user])
+    print(menu[i])
     beverage = input("Enter the number ")
     print('Enjoy your',menu['b'][beverage])
 
