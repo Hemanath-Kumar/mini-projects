@@ -1,7 +1,9 @@
-from imp import load_source
 import json
 
-user_input=input('Enter the Key - ')
+
+import os
+
+#user_input=input('Enter the Key - ')
 
 def add():
     Name=input("Enter Name of your password - ")
@@ -22,19 +24,21 @@ def view():
 
 def load():
     #This function is used to load the Json file ,to get the detail of contact
-    with open('password_manager\login.json','r') as f:
+    with open('password_manager/login.json','r') as f:
        i = json.load(f)
        return i
 
 def login():
 
-    i=load()
-
     login=input("Enter Username = ")
     login_pass=input("Enter Password = ")
+    [login]=login_pass
 
     if i[login] and i[login][login_pass]:
         print(i[login][login_pass])
+
+        with open('password_manager\login.json', 'w') as f:
+            json.dump(i, f)
     
     else:
         print('er')
