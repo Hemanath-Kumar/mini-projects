@@ -2,7 +2,7 @@ import json
 import os
 
 
-
+# In development stage
 
 def signup():
     if os.path.exists('data/user.json'):
